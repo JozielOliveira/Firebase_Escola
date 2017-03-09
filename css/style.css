@@ -1,0 +1,105 @@
+body { padding-top: 50px; }
+article{
+	background: rgb(0, 255, 255);
+	display: inline-block;!important
+}
+.box{
+	height: auto;
+}
+.um {
+	box-shadow: -5px 9px 34px;
+	margin-top: 10px;
+	float: left;
+}
+.um img, .dois img{
+	float: left;
+	margin: 15px;
+}
+.um .box, .dois .box {
+	float: right;
+	width: 500px;
+	height: auto;
+}
+.dois{
+	box-shadow: -8px 12px 35px;
+	margin-top: 10px;
+	float: right;
+}
+form{
+	box-shadow: -10px 10px 20px;
+	border-radius: 20px 20px;
+    margin-top: 20px;
+    margin-right: 25%;
+    margin-left: 25%;
+    padding: 25px;
+    display: block;
+    width: 50%;
+    background: rgb(224, 107, 61);
+}
+footer{
+	background:rgb(0, 0, 0);
+	color:rgb(255, 255, 255);
+	display: -webkit-inline-box;
+	height: auto;
+	margin-top: 10px;
+}
+.btn-group {
+	margin-right: 25%;
+    margin-top: 10px;
+    padding-top: 80px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.section_horiario{
+	background: aquamarine;
+    margin-top: 20px;
+    width: 50%;
+    height: 300px;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 20px;
+}
+.section_manha{
+	background: tomato;
+    width: 80%;
+    height: 400px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+.section_manha h1{
+	text-align: center;
+    padding-top: 20px;
+}
+#botaoo{
+	    margin-left: 46%;
+}
+h3{
+	padding-left: 40px;
+    width: 310px;
+    float: left;
+}
+#fileInput{
+	    padding-top: 23px;
+}
+.titulo{
+	text-align: -webkit-center;
+    padding-top: 25px;
+}
+.carousel-inner img {
+    min-height: 200px;
+   }
+@media screen and (max-width: 747px) {
+ 	.um img, .dois img{
+ 		display: none;
+ 	}
+ 	.box{
+ 		margin: 15px;
+ } 
+@media screen and (max-width: 547px) {
+.box{
+ 		width: 100% !important;
+ 		height: auto!important;
+ 		margin: 0px;
+ 		padding: 15px;
+ 	}
+ }

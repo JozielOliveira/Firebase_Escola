@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Tchedule</title>
+
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet" media="screen and (max-width: 1800px)" />
+    <script src="js/javascript.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script>
+    // Initialize Firebase
+    var config = {
+    apiKey: "AIzaSyBuSGnLNjkpXLH_I3_2aE4oNka8JiZ-g4Q",
+    authDomain: "escola-3aa5c.firebaseapp.com",
+    databaseURL: "https://escola-3aa5c.firebaseio.com",
+    storageBucket: "escola-3aa5c.appspot.com",
+    messagingSenderId: "223796844995",
+    };
+    firebase.initializeApp(config);
+    var database = firebase.database();
+
+function writeUserData() {
+  var texto = document.getElementById("jsonArea").value;
+  var nooo = document.getElementById("nome").value;
+  database.ref('/users/'+ nooo).set(texto);
+}
+
+
+  </script>
+  <style>
+  #Xml{     display: none;    }
+    #Json{    display: none;    }
+    #h4{      display: none;    }
+    #jsonArea{  display: none;    }
+  </style>
+
+  </head>
+  <style>
+    body{
+      background: antiquewhite;
+    }
+        h1, h3{
+      color: white;
+    }
+  </style>
+
+  <body>
+  <nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Tchêdule</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li class="active"><a href="#">Horário Novo</a></li>
+        <li><a href="#">Quem Somos</a></li>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<section class="section_manha">
+<h1>Horário da Manhã</h1>
+      <h3>Selecione um arquivo:</h3> 
+      <input type="file" id="fileInput">
+    </div>
+    <div  id="Xml">
+         <h4>XML:</h4>
+        <textarea id="xmlArea" cols="55" rows="15"></textarea>
+    </div>
+    <div>
+         <h4 id="h4">JSON:</h4>
+         <textarea id="jsonArea" cols="55" rows="15"></textarea></br>
+         <button onclick="saveData()" class="btn btn-success" id="botaoo">Salvar</button>
+         <script src="https://cdn.firebase.com/js/client/2.3.1/firebase.js"></script>
+         <script>
+       var ref = new Firebase("https://escola-3aa5c.firebaseio.com/");
+      
+    function saveData(){
+      var usersRef = ref.child("Integrado_Manha");
+      var testess  = document.getElementById('jsonArea').value;
+        usersRef.set(JSON.parse(testess));
+    }
+         </script>    
+    </div>
+</div>
+</section>
+</body>
+</html>
